@@ -674,6 +674,10 @@
          font-size: 14px;
        }
 
+       #capacityWrapper{
+         display: inherit;
+       }
+
 
       @media screen and (max-width: 800px) {
 
@@ -809,6 +813,9 @@
         #end, #end2 {
           margin-left: 120px;
           font-size: 11px;
+        }
+        #capacityWrapper{
+          display: none;
         }
       }
       @media screen and (max-width: 500px) {
@@ -1029,39 +1036,41 @@
                 </div>
               </div>
 
-              <div id="capacity" class='row itemWrapper'>
-                 <h2 class="subtitle"> Capacidad </h2>
-              </div>
-              <div class="itemWrapper">
-                <svg id="reset3" class="item" version="1.1" x="0px" y="0px"
-                  viewBox="0 0 48.9 42" style="enable-background:new 0 0 48.9 42;" xml:space="preserve">
-                <g id="">
-                 <path id="XMLID_2_" class="st0" d="M13.2,32.2c-4.1-4.1-5.4-9.7-4.3-14.9l4.4,1.4L10.1,6L0.1,14.3l4.4,1.4
-                   c-1.7,6.8,0.1,14.3,5.4,19.7c6.2,6.2,15.5,7.7,23.1,4.2L31.8,35C25.8,38.2,18.2,37.2,13.2,32.2z"/>
-                 <path id="XMLID_1_" class="st0" d="M44.5,26c1.7-6.8-0.1-14.3-5.4-19.7c-6.2-6.2-15.4-7.6-23-4.3l1.1,4.6c6-3,13.6-2.1,18.5,2.9
-                   c4.1,4.1,5.4,9.7,4.3,14.9l-4.4-1.4l3.1,12.7l10.1-8.4L44.5,26z"/>
-                </g>
-                </svg>
-                <div class="item">
-                  <p> Reinicia Capacidad</p>
+              <div id="capacityWrapper">
+                <div id="capacity" class='row itemWrapper'>
+                   <h2 class="subtitle"> Capacidad </h2>
                 </div>
-              </div>
-              <div class='row itemWrapper'>
-                 <div class="">
-                    <img id="minCircle" class='item2' src="./img/legend.svg" /img>
-                    <p id="minCircleVal" class='item2'></p>
-                    <img id="maxCircle" class='item2' src="./img/legend.svg" /img>
-                    <p id="maxCircleVal" class='item2'></p>
-                 </div>
-              </div>
-              <div class='session' id='sliderbar'>
-                 <input id='slider' class='row' type='range' min='0' max='' step='1' value='' />
-                 <div id="wrapper">
-                    <p id="start"></p>
-                    <p id="end"></p>
-                 </div>
-                 <p>Capacidad mínima: <span id="selectedCapacity">1</span> MW </p>
-              </div>
+                <div class="itemWrapper">
+                  <svg id="reset3" class="item" version="1.1" x="0px" y="0px"
+                    viewBox="0 0 48.9 42" style="enable-background:new 0 0 48.9 42;" xml:space="preserve">
+                  <g id="">
+                   <path id="XMLID_2_" class="st0" d="M13.2,32.2c-4.1-4.1-5.4-9.7-4.3-14.9l4.4,1.4L10.1,6L0.1,14.3l4.4,1.4
+                     c-1.7,6.8,0.1,14.3,5.4,19.7c6.2,6.2,15.5,7.7,23.1,4.2L31.8,35C25.8,38.2,18.2,37.2,13.2,32.2z"/>
+                   <path id="XMLID_1_" class="st0" d="M44.5,26c1.7-6.8-0.1-14.3-5.4-19.7c-6.2-6.2-15.4-7.6-23-4.3l1.1,4.6c6-3,13.6-2.1,18.5,2.9
+                     c4.1,4.1,5.4,9.7,4.3,14.9l-4.4-1.4l3.1,12.7l10.1-8.4L44.5,26z"/>
+                  </g>
+                  </svg>
+                  <div class="item">
+                    <p> Reinicia Capacidad</p>
+                  </div>
+                </div>
+                <div class='row itemWrapper'>
+                   <div class="">
+                      <img id="minCircle" class='item2' src="./img/legend.svg" /img>
+                      <p id="minCircleVal" class='item2'></p>
+                      <img id="maxCircle" class='item2' src="./img/legend.svg" /img>
+                      <p id="maxCircleVal" class='item2'></p>
+                   </div>
+                </div>
+                <div class='session' id='sliderbar'>
+                   <input id='slider' class='row' type='range' min='0' max='' step='1' value='' />
+                   <div id="wrapper">
+                      <p id="start"></p>
+                      <p id="end"></p>
+                   </div>
+                   <p>Capacidad mínima: <span id="selectedCapacity">1</span> MW </p>
+                </div>
+              <div>
             </div>
 
             <div class="instruction itemWrapper" id="instruction">
@@ -1189,14 +1198,14 @@
           });
 
           // var consoleHeight = $("#console").height() / 2;
-          $("#toggleConsole").css("top", 310);
+          $("#toggleConsole").css("top", 330);
 
           if(medium){
-            $("#toggleConsole").css("top", 250);
+            $("#toggleConsole").css("top", 300);
           }
 
           if(mobile){
-            $("#toggleConsole").css("top", 240);
+            $("#toggleConsole").css("top", 190);
           }
 
 
@@ -1567,11 +1576,11 @@
               if(tab1){
                 $("#toggleConsole").css("top", 330);
                 if(medium){
-                  $("#toggleConsole").css("top", 260);
+                  $("#toggleConsole").css("top", 300);
                 }
 
                 if(mobile){
-                  $("#toggleConsole").css("top", 260);
+                  $("#toggleConsole").css("top", 190);
                 }
 
                 map.setPaintProperty('plants',"circle-color", [
@@ -1598,11 +1607,11 @@
 
                 $("#toggleConsole").css("top", 310);
                 if(medium){
-                  $("#toggleConsole").css("top", 250);
+                  $("#toggleConsole").css("top", 290);
                 }
 
                 if(mobile){
-                  $("#toggleConsole").css("top", 240);
+                  $("#toggleConsole").css("top", 180);
                 }
 
 
